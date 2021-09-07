@@ -1,0 +1,182 @@
+.App {
+  padding-left: 50px;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+  margin: 1vh;
+  min-height: 93vh;
+  background-color: rgba(255, 255, 255, .25);
+  padding-bottom: 30px;
+  box-shadow: -1px -1px 1rem 0 rgba(104, 94, 94, 0.2);
+}
+
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.3rem;
+  color: #e0e9f0;
+  text-shadow: 1px 1px 6px black; 
+  justify-content: center;
+  margin-right: 45px;
+}
+
+/*.App-link {
+  color: #61dafb;
+}*/
+
+.add-btn {
+  height: 55px;
+  width: 55px;
+  border: 0;
+  border-radius: 30px;
+  margin: 25px 0 0 20px;
+  padding: 5px 0 0 1px;
+  box-shadow: 0px 0px 2px #315b7d;
+  outline:none;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #fff;
+  background-color: steelblue;
+}
+
+.add-btn:hover {
+  box-shadow: 1px 1px 2px 0px black;
+}
+
+.add-form {
+  border: 2px solid #b8b8b8;
+  border-radius: 20px;
+  margin: 15px 50px 40px 0;
+  background-color: gainsboro;
+  box-shadow: 0px 0px 2px black;
+  border-left: 4px solid #386890;
+  border-right: 4px solid #386890;
+  
+}
+
+.add-form:hover {
+  box-shadow: 1px 2px 2px black;
+}
+
+.form-control {
+  margin: 10px 5% 0 6%;
+}
+
+.form-control label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.form-control input {
+  width: 96.5%;
+  height: 25px;
+  border-radius: 8px;
+  outline: none;
+  background-color: #efefef;
+}
+
+.form-control-check{
+  width: 100px;
+  height: auto;
+  display: flex;  
+}
+
+
+.save-btn{
+  width: 80%;
+  margin: 0 0 16px 10%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  letter-spacing: 2px;
+  border-radius: 14px;
+  background-color: #8c8c8c;
+  border-left: 2px solid #999;
+  border-top: 2px solid #999;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.save-btn:hover{
+  background: linear-gradient(to right, #7b7b7b, #666, #7b7b7b)  
+}
+
+.task{
+  border: 2px solid #b8b8b8;
+  margin: 10px 50px 0 0;
+  padding: 5px 0 5px 16px;
+  border-radius: 8px;
+  background-color: gainsboro;
+  box-shadow: 0px 0px 2px black;
+}
+
+.task:hover {
+  box-shadow: 1px 1px 3px black;
+}
+
+.reminder{
+  border-left: 4px solid green;
+  border-right: 4px solid green;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+}
+
+p {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+
+.fa-cross{
+  color: darkred;
+  float: right;
+  margin-right: 2vh;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px black;
+} 
+
+.fa-cross:hover {
+  color: red;
+  box-shadow: 1px 1px 2px black;
+}
+
+::-webkit-scrollbar
+{
+   width: 4px;
+   background-color: steelblue;
+}
+
+::-webkit-scrollbar-thumb
+{
+   border-radius: 2px;  
+   background: rgba(0, 0, 0, .3);
+}
+
+@media (max-width: 600px) {
+  .App-header {
+    font-size: 1rem;
+  }
+
+  .add-btn {
+    height: 44px;
+    width: 44px;
+    font-size: 1em;
+  }
+
+  h1{
+    margin-top: 26px;
+  }
+  
+}
