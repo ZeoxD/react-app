@@ -5,6 +5,8 @@ import Header from './Header';
 import Tasks from './Tasks'
 import AddTask from './AddTask';
 import firebase from './firebase'; 
+import Navbar from './Navbar';
+
 
 const db = firebase.database();
 
@@ -63,9 +65,12 @@ function App() {
 
   return (
     <div className="App">
-      <Header onAdd={ () => setShowAddTask(!showAddTask) } showAdd={showAddTask}/>
-      { showAddTask && <AddTask onAdd={addTask}/> }
-      <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
+      <Navbar/>
+      <div className="App-content">
+        <Header onAdd={ () => setShowAddTask(!showAddTask) } showAdd={showAddTask}/>
+        { showAddTask && <AddTask onAdd={addTask}/> }
+        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
+      </div>
     </div>
   );
 }
