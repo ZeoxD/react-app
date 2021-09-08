@@ -1,6 +1,6 @@
-import NavItem from './NavItem'
+import React from 'react'
 
-function Navbar(props) {
+function NavbarMain(props) {
     return (
         <nav className="navbar">
             <ul className="navbar-nav">{ props.children }</ul>
@@ -8,4 +8,4 @@ function Navbar(props) {
     )
 }
 
-export default Navbar
+export default NavbarMain
