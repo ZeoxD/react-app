@@ -65,9 +65,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar onAdd={ () => setShowAddTask(!showAddTask) } showAdd={showAddTask}/>
       <div className="App-content">
-        <Header onAdd={ () => setShowAddTask(!showAddTask) } showAdd={showAddTask}/>
+        <Header/>
         { showAddTask && <AddTask onAdd={addTask}/> }
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
       </div>

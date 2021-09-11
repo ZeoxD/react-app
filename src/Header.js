@@ -2,12 +2,11 @@ import React from 'react';
 import Button from './Button';
 import {FaAngleDoubleDown, FaAngleDoubleUp} from 'react-icons/fa'
 
-const Header = ({title, onAdd, showAdd}) => {
+const Header = ({title, onAdd}) => {
 
     return (
         <header class="App-header">
             <h1>{title}</h1>
-            <Button color={showAdd ? '#386890': 'steelblue'} text={showAdd ? <FaAngleDoubleUp/> : <FaAngleDoubleDown/>} onClick={onAdd}/>
         </header>
     )
 }

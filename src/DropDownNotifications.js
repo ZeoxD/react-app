@@ -1,13 +1,13 @@
 import React from 'react'
 import DropDownItem from './DropDownItem'
-import { FaPlus } from 'react-icons/fa'
+import { FaPlus, FaBell } from 'react-icons/fa'
 import { FaArrowRight } from 'react-icons/fa'
 import logo from './logo.svg'
 
-function DropDownMenu() {
+function DropDownNotifications() {
     return (
         <div className="dropdown">
-            <DropDownItem leftIcon={<img src={logo} className="profile-logo"></img>} >My Profile</DropDownItem>
+            <DropDownItem leftIcon={<FaBell/>} >Notifications</DropDownItem>
             <DropDownItem leftIcon={<FaPlus/>} rightIcon={<FaArrowRight/>}>
                 Other Tasks
             </DropDownItem>
@@ -22,4 +22,4 @@ function DropDownMenu() {
     )
 }
 
-export default DropDownMenu
+export default DropDownNotifications

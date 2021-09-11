@@ -1,12 +1,10 @@
 import React, {useState} from 'react'
 
-const Button = ({text, color, onClick}) => {
-    
-    const [newcolor, setColor] = useState('#8c8c8c')
-    
+const Button = ({}) => {
+        
     return (
-        <button className="add-btn" onClick = {onClick}  style={{backgroundColor: color}}>
-            {text}
+        <button className="add-btn">
+            
         </button>
     )
 }
