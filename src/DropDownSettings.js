@@ -1,21 +1,22 @@
 import React from 'react'
 import DropDownItem from './DropDownItem'
-import { FaPlus, FaUser, FaArrowRight } from 'react-icons/fa'
 
-function DropDownSettings() {
+function DropDownSettings(props) {
+
     return (
         <div className="dropdown">
-            <DropDownItem leftIcon={<FaUser/>} >My Profile</DropDownItem>
-            <DropDownItem leftIcon={<FaPlus/>} rightIcon={<FaArrowRight/>}>
-                Other Tasks
+            <DropDownItem leftIcon={props.leftIcon[0]} rightIcon={props.rightIcon[0]}>
+                {props.children[0]}
             </DropDownItem>
-            <DropDownItem leftIcon={<FaPlus/>}>
-                Other Tasks
+            <DropDownItem leftIcon={props.leftIcon[1]} rightIcon={props.rightIcon[1]}>
+                {props.children[1]}
             </DropDownItem>
-            <DropDownItem leftIcon={<FaPlus/>} rightIcon={<FaArrowRight/>}>
-                Other Tasks
+            <DropDownItem leftIcon={props.leftIcon[2]} rightIcon={props.rightIcon[2]}>
+                {props.children[2]}
             </DropDownItem>
-
+            <DropDownItem leftIcon={props.leftIcon[3]} rightIcon={props.rightIcon[3]} userLog={props.userLog}>
+                {props.children[3]}
+            </DropDownItem>
         </div>
     )
 }

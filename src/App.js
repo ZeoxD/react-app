@@ -4,14 +4,16 @@ import './App.css';
 import Header from './Header';
 import Tasks from './Tasks'
 import AddTask from './AddTask';
-import firebase from './firebase'; 
 import Navbar from './Navbar';
+import SignIn from './SignIn';
 
-
-const db = firebase.database();
+import firebase from './firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 function App() {
 
+  const [user,setUser] = useState(false);
   const[showAddTask, setShowAddTask] = useState(false)
   
   const [tasks, setTasks] = useState([    
@@ -38,14 +40,20 @@ function App() {
       text: 'Going to Park',
       day: 'tuesday',
       reminder: true,
+    },
+    {
+      id:5, 
+      text: 'Going to Study',
+      day: 'tuesday',
+      reminder: false,
+    },
+    {
+      id:6, 
+      text: 'Going to Sleep',
+      day: 'tuesday',
+      reminder: true,
     }
   ])
-
-
-  console.log(tasks);
-
-  const zeoTasks = db.ref("react-task-tracker-cf4b4-default-rtdb");
-  zeoTasks.push(JSON.stringify(tasks));
 
   const addTask = (task) => {
     const id = Math.floor(Math.random()*1000) + 1
@@ -65,12 +73,13 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar onAdd={ () => setShowAddTask(!showAddTask) } showAdd={showAddTask}/>
-      <div className="App-content">
-        <Header/>
-        { showAddTask && <AddTask onAdd={addTask}/> }
-        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
-      </div>
+        <Navbar onAdd={ () => setShowAddTask(!showAddTask) } showAdd={showAddTask} tasks={tasks} userLog={setUser}/>
+        {user ? 
+        <div className="App-content">
+          <Header/>
+          { showAddTask && <AddTask onAdd={addTask}/> }
+          <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
+        </div> : <SignIn setUser={setUser}/>}
     </div>
   );
 }

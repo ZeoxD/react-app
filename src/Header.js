@@ -5,7 +5,7 @@ import {FaAngleDoubleDown, FaAngleDoubleUp} from 'react-icons/fa'
 const Header = ({title, onAdd}) => {
 
     return (
-        <header class="App-header">
+        <header className="App-header">
             <h1>{title}</h1>
         </header>
     )
